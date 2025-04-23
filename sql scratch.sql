@@ -6,9 +6,26 @@ ALTER TABLE PLAYERS RENAME COLUMN MMR TO mmr;
 
 SELECT * FROM PLAYERS;
 
-INSERT INTO PLAYERS (steam_id, name) VALUES ('76561198287737223','Barricade');
-INSERT INTO PLAYERS (steam_id, name) VALUES ('76561198165279368','Dewey Fan');
-INSERT INTO PLAYERS (steam_id, name) VALUES ('76561198202331845','Numfa');
+INSERT INTO PLAYERS (steam_id, name) VALUES ('76561198168895291','HoneyedBiscuit');
+INSERT INTO PLAYERS (steam_id, name) VALUES ('76561198028038300','AlexAlexov');
+INSERT INTO PLAYERS (steam_id, name) VALUES ('76561197989705408','steez');
+INSERT INTO PLAYERS (steam_id, name) VALUES ('76561198277444580','beef');
+INSERT INTO PLAYERS (steam_id, name) VALUES ('76561198797718588','IAmArch');
+
+
+SELECT * FROM GAMES;
+
+UPDATE GAMES SET csc_id = 'M11' WHERE game_id = '394e02b3-9c86-422f-a2f6-e0cb0e483f43';
+UPDATE GAMES SET csc_id = 'M11' WHERE game_id = '32c2f3db-b043-4f27-bbfb-c6772b97194c';
+UPDATE GAMES SET csc_id = 'M12' WHERE game_id = 'e8c44097-08f1-4491-abc3-674ce279b284';
+UPDATE GAMES SET csc_id = 'M12' WHERE game_id = 'b19ec78c-9eac-44d0-b4ac-f2da21dd620c';
+
+
+SELECT * FROM PLAYERS;
+
+SELECT * FROM GAMES;
+
+UPDATE GAMES SET csc_id = 'M10' WHERE game_id = '7362a701-1040-4a0e-b970-a6966671ac95';
 
 .tables
 
@@ -205,6 +222,13 @@ JOIN PLAYER_STATS_CT c ON c.game_id = s.game_id AND c.steam_id = s.steam_id
 JOIN PLAYER_STATS_T t ON t.game_id = s.game_id AND t.steam_id = s.steam_id
 JOIN GAMES g ON g.game_id = s.game_id
 WHERE g.game_id = 'a30bccbd-1fc6-4348-8531-cb46763341d0'
+;
+
+SELECT p.name, SUM(s.saves)
+FROM PLAYER_STATS_TOTAL s
+JOIN PLAYERS p ON p.steam_id = s.steam_id
+GROUP BY p.name
+ORDER BY SUM(s.saves) DESC
 ;
 
 SELECT *

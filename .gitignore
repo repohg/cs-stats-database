@@ -1,0 +1,24 @@
+#Ignore the local configuration file
+config.json
+
+#Ignore demo/ files, but maintain the structure
+demos/**
+!demos/
+!demos/new/
+!demos/processed/
+!demos/new/.keep
+!demos/processed/.keep
+
+#Ignore data/ files, but maintain the structure
+#data/**
+!data/
+!data/backups/
+!data/logs/
+!data/backups/.keep
+!data/logs/.keep
+
+#Ignore export/ files, but maintain the structure
+exports/**
+!exports/
+!exports/tableau/
+!exports/tableau/.keep

@@ -1,8 +1,9 @@
-$db = "D:\demos\draftLeague.db"
+#$db = "D:\demos\draftLeague.db"
+$db = "C:\Users\repoh\cs-stats-database\data\draftLeague.db"
 
-$PlayerStatsCsv = "C:\Users\Sean\Desktop\tableau.csv"
-$RoundStatsCsv = "C:\Users\Sean\Desktop\draftLeagueRounds.csv"
-$GameStatsCsv = "C:\Users\Sean\Desktop\draftLeagueGames.csv"
+$PlayerStatsCsv = "C:\Users\repoh\Desktop\tableau.csv"
+$RoundStatsCsv = "C:\Users\repoh\Desktop\draftLeagueRounds.csv"
+$GameStatsCsv = "C:\Users\repoh\Desktop\draftLeagueGames.csv"
 
 $PlayerStatsQuery = @"
 SELECT g.game_id,

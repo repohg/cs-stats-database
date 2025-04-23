@@ -1,0 +1,5 @@
+{
+    "DatabasePath": ".\\data\\yourDatabase.db",
+    "DemoNewPath": ".\\demos\\new\\",
+    "TableauExportPath": ".\\exports\\tableau\\"
+}
